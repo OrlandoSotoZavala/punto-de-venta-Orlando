@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models;
+use App\Models\SaleDatails;
+use App\Models\Product;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Sale extends Model
+{
+    protected $fillable = [
+        'client_id',
+        'user_id',
+        'purchase_date',
+        'tax',
+        'total',
+        'status'
+    ];
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
+
+    public function saleDetails()
+    {
+        return $this->hasMany(SaleDatails::class);
+    }
+}

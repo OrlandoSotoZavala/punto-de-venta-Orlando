@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    
+    box-sizing: border-box;
+    font-family: 'open sans';
+    width: auto;
+    height: auto;
+    padding: 0px;
+    margin: 0px; /* Agregamos márgenes a los lados */
+    border-radius: 0px; /* Añadimos bordes redondeados */
+    background: linear-gradient(to right, #add8e6, #98fb98, #ffc0cb, #fffacd, #e6e6fa, #ffb6c1, #c1ffc1, #fdfd96, #d8bfd8, #ffcccb, #f0e68c, #c2dfff);
+        
+    
+    
+}
+
+/*.container{
+    width: 100%;
+    height: 100vh;
+}*/
+
+.titulo {
+    font-size: 36px; /* Ajusta el tamaño según tus preferencias */
+    color: #ff69b4; /* Color rosa pastel, puedes cambiarlo según tus preferencias */
+    font-family: 'Candy Font', cursive; /* Utiliza la tipografía de dulcería que desees, asegúrate de tenerla importada o incluida en tu proyecto */
+}
+
+/* Header */
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at top left,
+        #fbb5e9, #f69cf9, #f185f3, #eb6fd4, #e864b5, #e5d293, #c3da83, #aad980, #add1f3, #bbabf5, #ce8cf9,
+        #d9b4f4, #ecc7f9, #f7d6ff, #c0e0f4, #ff7b90, #ff9e80, #ffd268, #7fe5a8, #6cd5e9, #8991e4, #c58fe5,
+        #f39090, #ffcf61, #60c5ba, #87c56d, #e9d758, #b0a1c7, #7f8c8d, #ac9f91, #7cbabf, #94d5c3, #ffcab2,
+        #ffae70, #8d8d92, #697689, #8a7e68, #b19269, #cdac81, #e1bc73);
+    background-size: 150% 150%;
+    background-position: 50% 50%;
+    position: relative;
+    animation: colorCycle 10s linear infinite alternate;
+}
+
+@keyframes colorCycle {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+
+
+
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.textos-header h1{
+    
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 90px; /* Ajusta el tamaño según tus preferencias */
+    color: #ff69b4;
+}
+
+.textos-header h2{
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Dancing Script', cursive; /* Reemplaza 'Nombre de la Fuente' con el nombre de la fuente que desees */
+    color: black; /* Puedes ajustar el color aquí si es necesario */
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* About us */
+
+
+
+
+
+
+
+
+
+/* CARRUSEL */
+
+
+
+.carrusel-color {
+    background-color: #f2f2f2; /* Cambia este valor al color que desees */ /* Añade relleno opcional para separar el contenido del borde de la sección */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow-x: hidden;
+
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+    font-size: 10px;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    height: 370px;
+    margin-right: 30px;
+    border-radius: 40px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    overflow: hidden; /* Agregado para ocultar el desbordamiento de las imágenes */
+}
+
+.card img {
+    width: 100%; /* Hace que la imagen ocupe el 100% del ancho del contenedor */
+    height: 100%; /* Hace que la imagen ocupe el 100% de la altura del contenedor */
+    object-fit: 0; /* Ajusta la imagen para cubrir completamente el contenedor */
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.face.face2 h2 {
+    font-family: 'Chewy', cursive;
+        font-size: 24px;
+        color: #333;
+}
+
+    .face {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.face1 {
+        box-sizing: border-box;
+        padding: 20px;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+        }
+
+        .dulce {
+          background-color: #fffc00;
+      }
+    }
+
+      &.face2 {
+        transition: 0.5s;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 10em;
+          color: #fff;
+          transition: 0.5s;
+          text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          z-index: 10;
+        }
+      }
+    }
+  
+
+  .card:hover .face.face2 {
+    height: 60px;
+
+    h2 {
+      font-size: 2em;
+    }
+  }
+
+  .card:nth-child(1) .face.face2 {
+    background-image: linear-gradient(
+      40deg,
+      #fffc00 0%,
+      #fc00ff 45%,
+      #00fffc 100%
+    );
+    border-radius: 15px;
+  }
+
+  .card:nth-child(2) .face.face2 {
+    background-image: linear-gradient(
+      40deg,
+      #fc00ff 0%,
+      #00fffc 45%,
+      #fffc00 100%
+    );
+    border-radius: 15px;
+  }
+  
+
+  .card:nth-child(3) .face.face2 {
+    background-image: linear-gradient(
+      40deg,
+      #fc00ff 0%,
+      #00fffc 45%,
+      #fffc00 100%
+    );
+    border-radius: 15px;
+  }
+
+  .card:nth-child(4) .face.face2 {
+    background-image: linear-gradient(
+      40deg,
+      #fc00ff 0%,
+      #00fffc 45%,
+      #fffc00 100%
+    );
+    border-radius: 15px;
+  }
+
+  .card:nth-child(5) .face.face2 {
+    background-image: linear-gradient(
+      40deg,
+      #00fffc 0%,
+      #fc00ff 45%,
+      #fffc00 100%
+    );
+    border-radius: 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Galeria */
+
+
+.portafolio{
+    background: #f2f2f2;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(273,91%,27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/* Clients */
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card{
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/*  Our team */
+
+.about-services{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+
+
+.servicio-cont{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+
+.servicio-ind img{
+    width: 90%;
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+
+.servicio-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* footer */
+
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 44%;
+    }
+
+    /* Clientes */
+
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card{
+        width: 90%;
+    }
+
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+
+    /* servicios */
+
+    .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .servicio-ind{
+        width: 100%;
+        text-align: center;
+    }
+
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+        margin-bottom: 60px;
+    }
+
+    .servicio-ind img{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+
+    .textos-header h2{
+        font-size: 20px;
+    }
+
+    /* ABOUT US */
+
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 95%;
+    }
+
+    /* Clients */
+
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+}
